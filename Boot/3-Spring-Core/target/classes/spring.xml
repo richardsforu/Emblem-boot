@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="es" autowire="constructor"  name="es1,es2,es3,es4,https://www.abc.com"
+		class="com.cts.service.EmployeeServiceImpl" scope="singleton" />
+
+	<bean id="deptService1" class="com.cts.service.DepartmentServiceImpl"/>
+	<bean id="deptService" class="com.cts.service.DepartmentServiceImpl"/>
+	
+
+</beans>

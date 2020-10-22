@@ -1,0 +1,35 @@
+--------------------------------
+Spring Core
+    -> Core Annotations
+    -> Autowire
+
+Spring Data
+    -> JDBC Template
+    -> ORM (Hibernate,JPA)
+
+Spring Web
+    -> Spring Web MVC
+    -> Spring Rest API
+
+-----------------------------------
+
+Spring Microservices
+
+-----------------------------------
+Spring Cloud Services
+    -> Config server
+    -> cloud bus
+    -> feign client
+    -> Ribbon load balancer
+    -> Eureka Service Discovery
+-----------------------------------
+
+Common Spring Modules
+    -> Spring Security
+    -> Spring Mail API
+    -> Spring batch
+
+-----------------------------------
+
+
+

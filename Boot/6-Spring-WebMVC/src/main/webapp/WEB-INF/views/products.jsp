@@ -7,10 +7,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link type="text/css" href="style.css">
 </head>
 <body>
 
-<h1>Products</h1> <hr/>
+<h1>Products</h1>
+<hr/>
+<jsp:include page="./menu.jsp"/>
+<hr/>
 
 
 <table border="1">

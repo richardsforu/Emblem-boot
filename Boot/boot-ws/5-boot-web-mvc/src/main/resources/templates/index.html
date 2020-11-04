@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Welcome to Spring boot web mvc</h1>
+	<hr />
+
+	<h1 th:text="${userName}"></h1>
+
+	<p th:text="${userName}"></p>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Product Id</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td th:text="${product.id}"></td>
+				<td th:text="${product.name}"></td>
+				<td th:text="${product.price}"></td>
+				<td th:text="${product.descption}"></td>
+			</tr>
+
+		</tbody>
+
+	</table>
+
+
+
+</body>
+</html>

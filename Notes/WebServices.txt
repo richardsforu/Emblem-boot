@@ -1,0 +1,18 @@
+Web services
+---------------
+1. SOAP (XML)
+2. REST (Text)
+
+
+//----------------------------------
+
+1. JAX-WS can(spec)
+    - SOAP (API's)
+2. JAX-RS (spec)
+    - Jersey - API
+    - Rest easy - API
+    - Apache CXF
+//----------------------------------
+
+
+Spring Rest API

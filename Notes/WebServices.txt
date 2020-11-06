@@ -16,3 +16,15 @@ Web services
 
 
 Spring Rest API
+
+http://localhost:8080/api/products/
+http://localhost:8080/api/products/10
+
+http://localhost:8080/api/products/price/100000/200000/electronics/
+
+
+
+------------------
+
+Roy Fielding
+

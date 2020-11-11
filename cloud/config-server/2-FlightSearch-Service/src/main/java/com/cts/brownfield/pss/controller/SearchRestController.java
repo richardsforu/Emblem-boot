@@ -1,8 +1,12 @@
 package com.cts.brownfield.pss.controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,20 +22,32 @@ import com.cts.brownfield.pss.service.SearchService;
 @RestController
 @RequestMapping("/api/pss")
 @CrossOrigin
+@RefreshScope
 public class SearchRestController {
+
+	@Value("${originairports.shutdown}")
+	private String originAirportShutdownList;
 
 	@Autowired
 	private SearchService searchService;
-	
+
 	@PostMapping("/findFlights")
-	public List<Flight> searchFlights(@RequestBody SearchQuery searchQuery){
+	public List<Flight> searchFlights(@RequestBody SearchQuery searchQuery) {
 		System.out.println(searchQuery);
+
+		// ....
+
+		if (Arrays.asList(originAirportShutdownList.split(",")).contains(searchQuery.getOrigin())) {
+			System.out.println("The origin airport is in shutdown state");
+			return new ArrayList<Flight>();
+		}
+
 		return searchService.search(searchQuery);
 	}
-	
+
 	@GetMapping("/findFlight/{id}")
-	public Flight findFlight(@PathVariable("id")long id) {
+	public Flight findFlight(@PathVariable("id") long id) {
 		return searchService.findByFlightId(id);
 	}
-	
+
 }

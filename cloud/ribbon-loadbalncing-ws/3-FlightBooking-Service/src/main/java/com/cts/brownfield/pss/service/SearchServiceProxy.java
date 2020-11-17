@@ -11,7 +11,7 @@ import com.cts.brownfield.pss.entity.Flight;
 @RibbonClient(name="search-service")
 public interface SearchServiceProxy {
 
-	@GetMapping("/findFlight/{id}")
+	@GetMapping("api/pss/findFlight/{id}")
 	Flight findFlight(@PathVariable("id") long id);
 
 }
